@@ -1,0 +1,675 @@
+/*police*/
+@font-face {
+    font-family: 'robotoblack';
+    src: url('fonts/Roboto-Black-webfont.eot');
+    src: url('fonts/Roboto-Black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Black-webfont.woff') format('woff'),
+         url('fonts/Roboto-Black-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-Black-webfont.svg#robotoblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('fonts/Roboto-Regular-webfont.eot');
+    src: url('fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Regular-webfont.woff') format('woff'),
+         url('fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*mise en forme du body*/
+
+body
+{
+    margin: 0px;
+    padding:0px;
+    width: 100vw;
+    font-family: robotoregular;
+    color: black;
+}
+
+header,main
+{
+    max-width: 426px;
+    margin:auto;
+}
+
+/*----------------------------------------------------HEADER-----------------------------------------------------------------*/
+
+#top_header /*conteneur du topbar (l'ensemble du header)*/
+{
+    width:100%;
+    height:130px;
+}
+
+.topbar /*logo + menu*/
+{
+    display: flex;
+    flex-direction: column;
+    z-index:1000;
+    background-color: white;
+    position:fixed; /*reste visible lors du déplacement de la page*/
+    width:100%;
+    max-width:426px;
+    padding-top: 10px;
+}
+
+.logo
+{
+    display: flex;
+    justify-content: center;
+}
+
+.nav_header
+{
+    margin:10px 0px 10px 0px;
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.nav_header a 
+{
+    margin: 0px 50px 0px 50px;
+    text-decoration: none; /*retrait soulignement par défaut des liens*/
+    color: black;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+.nav_accueil
+{
+    transform: translateX(3px);
+}
+
+.nav_services 
+{
+    transform: translateX(4px);
+}
+
+.nav_header a:active /*couleur lors du clique des liens de navigation*/
+{
+    color: #5CADD3;
+}
+
+/*------------------------------------------------SECTION ACCUEIL-----------------------------------------------------------------*/
+
+#accueil /*slider*/
+{   
+    background-color:#F5F5F5;
+    background-size: contain;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*texte de présentation*/
+
+.description_slider 
+{
+    align-items: center;
+    color: black;   
+    height:125px;
+}
+
+.description_slider h1 
+{
+    font-size: 19px;
+    margin: 0px;
+    font-family: 'robotoblack';
+    line-height: 1em;
+    text-align: center;
+}
+
+.description_slider p
+{
+    margin: 7px 0px 8px 0px;
+    font-family: 'robotoregular';
+    font-size: 15px;
+    text-align: center;
+    line-height: 1.45em;
+}
+
+.bleu /*WEBAGENCY*/
+{
+    color: #5ca9d0;
+    font-size: 19px;
+    font-family: 'robotoblack';
+}
+
+.bouton 
+{
+    background-color: #5CADD3;
+    border-radius: 3px;
+    text-decoration: none; /*retrait soulignement par défaut des liens*/
+    color: #ffffff;
+    font-size: 12px;
+    box-shadow: 0px 4px 0px #4494BB;
+    margin: auto;
+    display: block;
+    width: 70px;
+    text-align: center;
+    padding: 7px;
+    
+}
+
+/*demi-cercles et chevrons du slider*/
+
+#accueil .fa 
+{
+    color:#FFFFFF;
+    font-size: 20px;
+}
+
+.contenair_chevron_right
+{
+   display: none;
+}
+
+.fa-chevron-right 
+{
+    display: none;
+}
+
+.contenair_chevron_left 
+{
+   display: none;
+}
+
+.fa-chevron-left 
+{
+    display:none;
+}
+
+/*timeline*/
+
+.contenair_timeline 
+{
+    display:none
+}
+
+/*------------------------------------------------SECTION SERVICES-----------------------------------------------------------------*/
+/*logo nos services et nos projets*/
+
+/*NOS SERVICES*/
+
+#services /*conteneur: HEADER_SERVICES + section ENSEMBLE_SERVICES*/
+{
+    padding:40px 0px 40px 0px; 
+    background-color: white;
+}
+
+/*header de la section services*/
+
+.header_services 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -38px;
+}
+
+.header_services h2 
+{
+    margin: auto;
+    line-height: 3em;
+    font-family: 'robotoblack', sans-serif;
+}
+
+.fa /*rond bleu (+ logos ux ui seo)*/
+{
+    color:#5CADD3;
+}
+
+.trait_logo /*(+nos projets)*/
+{
+    width: 130px;
+    border: 1px solid #ebebeb;
+    position: relative;
+    margin: auto;
+}
+
+.header_services .fa-circle /*rond bleu sur ligne*/
+
+{  
+    position: relative;
+    top: -15px;
+    margin: auto;
+    border-radius: 100%;
+    border: 6px solid #FFFFFF;
+}
+
+.header_services p
+{
+    margin: 0px 19px 40px 19px;
+    line-height: 1.45em;
+    text-align: center;
+}
+
+/*section ensemble_services*/
+
+.ensemble_services 
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.img_services
+{
+    display: flex;
+    justify-content: center;
+}
+
+/*aside presentation_services*/
+
+.presentation_services /*logo + description UX, UI, SEO*/
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.ux_design,.ui_design,.seo /*conteneur ux ui seo*/
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.logo_ux /*conteneur du logo ux*/
+{
+    display: flex;
+    justify-content: center;
+    top: 50%;
+}
+
+.logo_ui, .logo_seo /*conteneur du logo ui seo*/
+{
+    display: flex;
+    justify-content: center;
+    top: 50%;
+    margin-top: 55px;
+}
+
+.presentation_services .fa-circle /*rond bleus ux, ui, seo*/
+{
+    font-size: 11px;
+    margin-top: 9px;
+    position: relative;
+    transform: translateX(-1px);
+}
+
+.cercle_logo /*cercle gris ux, ui, seo*/
+{
+    border: 1px solid #EDEDED;
+    height: 50px;
+    border-radius: 100%;
+    width: 50px;
+    position: absolute;
+    margin-top: -13px;
+    margin-left: -10px;
+}
+
+.logo_ux .fa-line-chart /*logo ux design*/
+{
+    font-size: 25px;
+    transform: translateX(-4px);
+}
+
+.logo_ui .fa-cubes
+{
+    font-size: 25px;
+    transform: translateX(-4px);
+}
+
+.logo_seo .fa-pie-chart
+{
+    font-size: 29px;
+    transform: translateX(-4px);
+}
+
+.description_ux h3, .description_ui h3, .description_seo h3
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'robotoblack', sans-serif;
+}
+
+.description_ux h3, .description_ui h3
+{
+    transform: translateX(-6px);
+}
+
+.description_seo h3
+{
+    transform: translateX(-9px);
+}
+
+
+.description_ux p, .description_ui p, .description_seo p
+{
+    text-align: justify;
+    margin: auto;
+    width: 380px;
+    line-height: 1.45em;
+}
+
+/*------------------------------------------------SECTION PROJETS-----------------------------------------------------------------*/
+
+#projets
+{
+    background-color: #F5F5F5;
+    margin: 0px;
+}
+
+/*HEADER DE LA SECTION PROJETS*/
+
+.header_projets
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.header_projets h2
+{
+    
+    margin: auto;
+    /*margin-bottom: 15px;*/
+    line-height: 3em;
+    font-family: 'robotoblack', sans-serif
+}
+
+.header_projets p
+{
+    margin: auto;
+    margin-top: -9px;
+    line-height: 1.45em;
+    width: 380px;
+    text-align: center;
+}
+
+.header_projets .fa-circle
+{  
+    position: relative;
+    top: -17px;
+    margin: auto;
+    border-radius: 100%;
+    border: 6px solid #FFFFFF;
+}
+
+/*MENU DE NAVIGATION DE LA SECTION PROJETS*/
+
+.nav_projets /*conteneur liens du portfolio*/
+{
+    display:flex;
+    height: 40px;
+    width: 380px;
+    margin: auto;
+    background-color: #E5E5E5;
+    margin-top: 27px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.nav_projets a
+{
+    text-decoration: none;
+    width: 100%;
+    margin: 0px;
+    line-height: 35px;
+    text-align: center;
+    color: black;
+}
+
+/*all works*/
+
+.nav_projets a:first-child
+{
+    border-radius: 5px 0px 0px 5px;
+    color: #FFFFFF;
+    background-color: #5ca9d0;
+    border-bottom: 3px solid #468CAD;
+}
+
+.nav_projets a:first-child::after
+{
+    font-family: "FontAwesome";
+    content:"\f0d7";
+    position: absolute;
+    transform: translate(-39px, 25px);
+    color: #468CAD;
+    font-size: 24px;
+}
+
+/*portfolio*/
+
+.nav_projets a:last-child:active
+{
+    border-radius: 0px 5px 5px 0px;  
+}
+
+/*menu de navigation au clic*/
+.nav_projets a:active
+{
+    color: #FFFFFF;
+    background-color: #5ca9d0;
+    border-bottom: 3px solid #468CAD;
+}
+
+.nav_projets a:active::after /*petit triangle bleu*/
+{
+    font-family: "FontAwesome";
+    content:"\f0d7";
+    position: absolute;
+    transform: translate(-39px, 25px);
+    color: #468CAD;
+    font-size: 24px;
+}
+
+/*SECTION PORTFOLIO DE LA SECTION PROJETS*/
+
+.portfolio article
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio figure /*conteneur image projet*/
+{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+    margin:0px;
+    width: 60%;
+} 
+
+.portfolio img /*image projet*/
+{
+    width: 100%;
+}
+
+.portfolio figcaption
+{   
+    height: 60px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.75);
+    margin-top: -60px;
+    visibility: hidden;
+}
+
+.portfolio h3
+{
+    margin: 3px 0px 0px 10px;
+    color: #FFFFFF;
+    font-size:17px;
+    font-family: "robotoblack", sans-serif;
+}
+
+.portfolio h4
+{
+    margin: 0px 0px 0px 10px;
+    color: #FFFFFF;
+    font-size:15px;
+}
+
+.logo_items
+{
+    height: 61px;
+    width: 100%;
+    margin-top: -39px;
+    visibility: hidden;
+}
+.portfolio .fa-eye
+{
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 17px;
+    margin: -18px 0px 0px 201px;
+    z-index: 1;
+    visibility: hidden;
+}
+
+.cercle_eye
+{
+    border: 3px solid white;
+    border-radius: 100%;
+    height: 35px;
+    width: 35px;
+    background-color:#4EA2B1;
+    position: absolute;
+    margin: -30px 0px 0px 189px;
+    visibility: hidden;
+}
+
+/*portfolio au clic*/
+
+.portfolio figure:active figcaption
+{
+    visibility: visible;
+}
+
+.portfolio figure:active .fa
+{
+    visibility: visible;
+}
+
+.portfolio figure:active .cercle_eye
+{
+    visibility: visible;
+}
+
+/*------------------------------------------------SECTION CARTOGRAPHIE-----------------------------------------------------------------*/
+
+#cartographie
+{
+    width: 100%;
+    height: 100%
+} 
+
+iframe
+{
+    width: 100%;
+    max-width: 426px;
+    height: 360px;
+    border:0;
+    position: absolute;
+}
+
+.iframe_color /*filtre bleu*/
+{
+    background-color: #5ca9d0;
+    width: 100%;
+    max-width: 426px;
+    height: 360px;
+    position: absolute;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/*FORMULAIRE DE CONTACT*/
+
+.contact /*conteneur formulaire de contact*/
+{
+    transform: translateY(360px);
+}
+
+fieldset
+{
+    border: 0px;
+    background-color:rgb(245,245,245);
+    margin:0px;
+    height: 450px;
+}
+
+fieldset h2
+{
+    margin-top: 3px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+fieldset address
+{
+    margin: -5px 0px -5px 0px;
+    text-align: center;
+    font-size: 15px;
+}
+
+fieldset>p
+{
+    height: 269px;
+    width: 260px;
+    margin: auto;
+}
+
+fieldset h2
+{
+    font-family: "robotoblack", sans-serif;
+}
+
+address
+{
+    font-style: normal;
+}
+
+#name, #email, #subject, textarea
+{
+    margin-bottom: 10px;
+    width:97%;
+    border-width: 1px;
+    border-radius: 5px 5px;
+    height: 20px;
+    padding: 5px;
+}
+
+label
+{
+    display:none;
+}
+
+textarea
+{
+    height: 140px;
+}
+
+input[type="submit"] /*bouton Send Message*/
+{
+    background-color:#5CADD3;
+    color: #ffffff;
+    border-width: 0px;
+    border-radius: 3px;
+    display: flex;
+    margin: auto;
+    padding: 7px;
+    font-family: "robotoregular", sans-serif;
+}
+
+
+
+

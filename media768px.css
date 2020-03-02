@@ -1,0 +1,649 @@
+/*police*/
+@font-face {
+    font-family: 'robotoblack';
+    src: url('fonts/Roboto-Black-webfont.eot');
+    src: url('fonts/Roboto-Black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Black-webfont.woff') format('woff'),
+         url('fonts/Roboto-Black-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-Black-webfont.svg#robotoblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('fonts/Roboto-Regular-webfont.eot');
+    src: url('fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Regular-webfont.woff') format('woff'),
+         url('fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*mise en forme du body*/
+
+body
+{
+    margin: 0px;
+    padding:0px;
+    width: 100vw;
+    font-family: robotoregular;
+    color: black;
+}
+
+header,main
+{
+    max-width: 768px;
+    margin:auto;
+}
+
+/*----------------------------------------------------HEADER-----------------------------------------------------------------*/
+
+#top_header /*conteneur du topbar (l'ensemble du header)*/
+{
+    width:100%;
+    height:92px;
+}
+
+.topbar /*logo + menu*/
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index:1000;
+    background-color: white;
+    position:fixed; /*reste visible lors du déplacement de la page*/
+    width:100%;
+    max-width:768px;
+    padding: 10px 0px 10px 0px;
+}
+
+.nav_header
+{
+    margin-top:5px;
+}
+
+.nav_header a 
+{
+    margin: 50px;
+    text-decoration: none; /*retrait soulignement par défaut des liens*/
+    color: black;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+.nav_header a:active /*couleur lors du clique des liens de navigation*/
+{
+    color: #5CADD3;
+}
+
+/*------------------------------------------------SECTION ACCUEIL-----------------------------------------------------------------*/
+
+#accueil /*slider*/
+{   
+    background: url(images/slider/bg1.jpg) no-repeat;
+    background-size: contain;
+    transform:translateY(20px);
+    height: 264px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*texte de présentation*/
+
+.description_slider 
+{
+    align-items: center;
+    padding-left: 10%;
+    color: white;   
+}
+
+.description_slider h1 
+{
+    font-size: 23px;
+    margin: 0px;
+    font-family: 'robotoblack';
+    line-height: 1em;
+}
+
+.description_slider p
+{
+    margin-bottom: 23px;
+    font-family: 'robotoregular';
+    font-size: 15px;
+    line-height: 1.45em;
+    width: 441px;
+}
+
+.bleu /*WEBAGENCY*/
+{
+    color: #5ca9d0;
+    font-size: 23px;
+    font-family: 'robotoblack';
+}
+
+.bouton 
+{
+    background-color: #5CADD3;
+    border-radius: 3px;
+    text-decoration: none; /*retrait soulignement par défaut des liens*/
+    color: #ffffff;
+    font-size: 13px;
+    box-shadow: 0px 4px 0px #4494BB;
+    padding:10px;
+}
+
+/*demi-cercles et chevrons du slider*/
+
+#accueil .fa 
+{
+    color:#FFFFFF;
+    font-size: 20px;
+}
+
+.contenair_chevron_right
+{
+    width: 40px;
+    height: 79px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 40px 0px 0px 40px;
+    position: absolute;
+    top: 92.5px;
+    margin-left: 728px; /*4K*/
+}
+
+.fa-chevron-right 
+{
+    position: absolute;
+    top:50%;
+    right: 9px;
+    transform: translateY(-10px)
+}
+
+.contenair_chevron_left 
+{
+    width: 40px;
+    height: 79px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 0px 40px 40px 0px;
+    position: absolute;
+    top:92.5px;
+}
+
+.fa-chevron-left 
+{
+    position: absolute;
+    top: 50%;
+    left: 9px;
+    transform: translateY(-10px);
+}
+
+/*timeline*/
+
+.contenair_timeline 
+{
+    width:768px;
+    height:5px;
+    transform: translateY(60px);
+    display: flex;
+}
+
+.timeline_blue 
+{
+    width:10%;
+    background-color: #5CADD3;
+    height: 100%;
+}
+
+.timeline_opacity 
+{
+    background-color: grey;
+    opacity: 0.2;
+    height: 100%;
+    width: 90%;
+}
+
+/*------------------------------------------------SECTION SERVICES-----------------------------------------------------------------*/
+
+/*NOS SERVICES*/
+
+#services /*conteneur: HEADER_SERVICES + section ENSEMBLE_SERVICES*/
+{
+    margin-top:25px; 
+}
+
+/*header de la section services*/
+
+.header_services 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.header_services h2 
+{
+    margin: auto;
+    line-height: 3em;
+    font-family: 'robotoblack', sans-serif;
+}
+
+.fa /*rond bleu (+ logos ux ui seo)*/
+{
+    color:#5CADD3;
+}
+
+.trait_logo /*(+nos projets)*/
+{
+    width: 130px;
+    border: 1px solid #ebebeb;
+    position: relative;
+    margin: auto;
+}
+
+.header_services .fa-circle /*rond bleu sur ligne*/
+
+{  
+    position: relative;
+    top: -15px;
+    margin: auto;
+    border-radius: 100%;
+    border: 6px solid #FFFFFF;
+}
+
+.header_services p
+{
+    margin: auto;
+    margin-top: -11px;
+    line-height: 1.45em;
+    text-align: center;
+}
+
+/*section ensemble_services*/
+
+.ensemble_services 
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.img_services
+{
+    margin: auto;
+}
+
+/*aside presentation_services*/
+
+.presentation_services /*logo + description UX, UI, SEO*/
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.ux_design,.ui_design,.seo /*conteneur ux ui seo*/
+{
+    display: flex;
+    justify-content: flex-start;
+    width:600px;
+    margin: auto;
+}
+
+.logo_ux, .logo_ui, .logo_seo /*conteneur des logos ux ui seo*/
+{
+    display: flex;
+    position: relative;
+    top: 50%;
+    margin-top: 35px
+}
+
+.presentation_services .fa-circle /*rond bleus ux, ui, seo*/
+{
+    font-size: 11px;
+    margin-right: 25px;
+    margin-top: 9px;
+    position: relative;
+}
+
+.cercle_logo /*cercle gris ux, ui, seo*/
+{
+    border: 1px solid #EDEDED;
+    height: 70px;
+    border-radius: 100%;
+    width: 70px;
+    position: absolute;
+    margin-top: -20px;
+    margin-left: -18px;
+}
+
+.logo_ux .fa-line-chart /*logo ux design*/
+{
+    font-size: 30px;
+    margin-right: 14.28px;
+}
+
+.logo_ui .fa-cubes
+{
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.logo_seo .fa-pie-chart
+{
+    font-size: 34px;
+    margin-right: 14.58px;
+}
+
+.description_ux, .description_ui, .description_seo
+{
+    text-align: justify;
+    line-height: 1.45em;
+}
+.description_ux h3,.description_ui h3, .description_seo h3
+{
+    line-height: 1px;
+    font-family: 'robotoblack', sans-serif;
+}
+
+/*------------------------------------------------SECTION PROJETS-----------------------------------------------------------------*/
+
+/*entête partie projet*/
+
+#projets
+{
+    background-color: #F5F5F5;
+}
+
+/*HEADER DE LA SECTION PROJETS*/
+
+.header_projets
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.header_projets h2
+{
+    
+    margin: auto;
+    line-height: 3em;
+    font-family: 'robotoblack', sans-serif;
+
+}
+
+.header_projets p
+{
+    margin: auto;
+    margin-top: -5px;
+    line-height: 1.45em;
+    text-align: center;
+}
+
+.header_projets .fa-circle
+{  
+    position: relative;
+    top: -17px;
+    margin: auto;
+    border-radius: 100%;
+    border: 6px solid #FFFFFF;
+}
+
+/*MENU DE NAVIGATION DE LA SECTION PROJETS*/
+
+.nav_projets /*menu du portfolio*/
+{
+    display:flex;
+    height: 40px;
+    width: 400px;
+    margin: auto;
+    background-color: #E5E5E5;
+    margin-top: 27px;
+    border-radius: 5px;
+}
+
+.nav_projets a
+{
+    text-decoration: none;
+    width: 100%;
+    margin: 0px;
+    line-height: 35px;
+    text-align: center;
+    color: black;
+}
+
+/*all works*/
+
+.nav_projets a:first-child
+{
+    border-radius: 5px 0px 0px 5px;
+    color: #FFFFFF;
+    background-color: #5ca9d0;
+    border-bottom: 3px solid #468CAD;
+}
+
+.nav_projets a:first-child:after
+{
+    font-family: "FontAwesome";
+    content:"\f0d7";
+    position: absolute;
+    transform: translate(-39px, 25px);
+    color: #468CAD;
+    font-size: 24px;
+}
+
+/*portfolio*/
+
+.nav_projets a:last-child:active
+{
+    border-radius: 0px 5px 5px 0px;  
+}
+
+/*menu de navigation au clic*/
+.nav_projets a:active
+{
+    color: #FFFFFF;
+    background-color: #5ca9d0;
+    border-bottom: 3px solid #468CAD;
+}
+
+.nav_projets a:active::after /*petit triangle bleu*/
+{
+    font-family: "FontAwesome";
+    content:"\f0d7";
+    position: absolute;
+    transform: translate(-39px, 25px);
+    color: #468CAD;
+    font-size: 24px;
+}
+
+/*SECTION PORTFOLIO DE LA SECTION PROJETS*/
+
+.portfolio article
+{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin: 4% 4% 0% 4%;
+}
+
+.portfolio figure /*conteneur image projet*/
+{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+    margin:0px;
+    width: 22%;
+} 
+
+.portfolio img /*image projet*/
+{
+    width: 100%;
+}
+
+.portfolio figcaption
+{   
+    height: 47px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.75);
+    margin-top: -45px;
+    visibility: hidden;
+}
+
+.portfolio h3
+{
+    margin: 5px 0px 0px 10px;
+    color: #FFFFFF;
+    font-size:13px;
+    font-family: "robotoblack", sans-serif;
+}
+
+.portfolio h4
+{
+    margin: 0px 0px 0px 10px;
+    color: #FFFFFF;
+    font-size:11px;
+}
+
+.logo_items
+{
+    height: 46px;
+    width: 100%;
+    margin-top: -58px;
+    visibility: hidden;
+}
+
+.portfolio .fa-eye
+{
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 14px;
+    margin: 14px 0px 0px 128px;
+    z-index: 1;
+    visibility: hidden;
+}
+
+.cercle_eye
+{
+    border: 3px solid white;
+    border-radius: 100%;
+    height: 25px;
+    width: 25px;
+    background-color:#4EA2B1;
+    position: absolute;
+    margin: 6px 0px 0px 119px;
+    visibility: hidden;
+}
+
+/*portfolio au clic*/
+
+.portfolio figure:active figcaption
+{
+    visibility: visible;
+   
+}
+
+.portfolio figure:active .fa
+{
+    visibility: visible;
+  
+}
+
+.portfolio figure:active .cercle_eye
+{
+    visibility: visible;
+   
+}
+
+/*------------------------------------------------SECTION CARTOGRAPHIE-----------------------------------------------------------------*/
+
+#cartographie
+{
+    width: 100%;
+    height: 100%
+} 
+
+iframe
+{
+    width: 100%;
+    max-width: 768px;
+    height: 600px;
+    border:0;
+    position: absolute;
+}
+
+.iframe_color /*filtre bleu*/
+{
+    background-color: #5ca9d0;
+    width: 100%;
+    max-width: 768px;
+    height: 600px;
+    position: absolute;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/*FORMULAIRE DE CONTACT*/
+
+.contact /*conteneur formulaire de contact*/
+{
+    width:36%;
+    position: relative;
+    left:56%;
+    z-index: 2;
+    padding-top:50px;
+}
+
+fieldset
+{
+    border: 0px;
+    background-color:rgba(245,245,245,0.8);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+fieldset h2
+{
+    font-family: "robotoblack", sans-serif;
+}
+
+address
+{
+    font-family: "robotoregular", sans-serif;
+    font-style: normal;
+}
+
+#name, #email, #subject, textarea
+{
+    margin-bottom: 10px;
+    width:97%;
+    border-width: 1px;
+    border-radius: 5px 5px;
+    height: 20px;
+    padding: 5px;
+}
+
+label
+{
+    display:none;
+}
+
+textarea
+{
+    height: 140px;
+}
+
+input[type="submit"] /*bouton Send Message*/
+{
+    background-color:#5CADD3;
+    color: #ffffff;
+    border-width: 0px;
+    border-radius: 3px;
+    padding: 6px;
+    font-family: "robotoregular", sans-serif;
+
+}
+
+
+
+
