@@ -29,7 +29,7 @@ body
     padding:0px;
     width: 100vw;
     font-family: robotoregular;
-    color: black;
+    color: #64686D;
 }
 
 header,main
@@ -68,7 +68,7 @@ header,main
 {
     margin: 50px;
     text-decoration: none; /*retrait soulignement par défaut des liens*/
-    color: black;
+    color: #64686D;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
 
@@ -149,7 +149,7 @@ header,main
     background-color: rgba(0,0,0,0.5);
     border-radius: 40px 0px 0px 40px;
     position: absolute;
-    top: 92.5px;
+    top: 81.5px;
     margin-left: 728px; /*4K*/
 }
 
@@ -168,7 +168,7 @@ header,main
     background-color: rgba(0,0,0,0.5);
     border-radius: 0px 40px 40px 0px;
     position: absolute;
-    top:92.5px;
+    top:81.5px;
 }
 
 .fa-chevron-left 
@@ -185,7 +185,7 @@ header,main
 {
     width:768px;
     height:5px;
-    transform: translateY(60px);
+    transform: translateY(71px);
     display: flex;
 }
 
@@ -226,6 +226,7 @@ header,main
     margin: auto;
     line-height: 3em;
     font-family: 'robotoblack', sans-serif;
+    color:#272727;
 }
 
 .fa /*rond bleu (+ logos ux ui seo)*/
@@ -344,6 +345,7 @@ header,main
 {
     line-height: 1px;
     font-family: 'robotoblack', sans-serif;
+    color: #272727;
 }
 
 /*------------------------------------------------SECTION PROJETS-----------------------------------------------------------------*/
@@ -369,6 +371,7 @@ header,main
     margin: auto;
     line-height: 3em;
     font-family: 'robotoblack', sans-serif;
+    color: #272727;
 
 }
 
@@ -409,7 +412,15 @@ header,main
     margin: 0px;
     line-height: 35px;
     text-align: center;
-    color: black;
+    color: #64686D;
+}
+
+/*menu de navigation au clic*/
+.nav_projets a:active
+{
+    color: #FFFFFF;
+    background-color: #5ca9d0;
+    border-bottom: 3px solid #468CAD;
 }
 
 /*all works*/
@@ -432,6 +443,16 @@ header,main
     font-size: 24px;
 }
 
+.nav_projets a:nth-child(3):active::after /*corporate triangle bleu*/
+{
+    font-family: "FontAwesome";
+    content:"\f0d7";
+    position: absolute;
+    transform: translate(-42px, 25px);
+    color: #468CAD;
+    font-size: 24px;
+}
+
 /*portfolio*/
 
 .nav_projets a:last-child:active
@@ -439,20 +460,12 @@ header,main
     border-radius: 0px 5px 5px 0px;  
 }
 
-/*menu de navigation au clic*/
-.nav_projets a:active
-{
-    color: #FFFFFF;
-    background-color: #5ca9d0;
-    border-bottom: 3px solid #468CAD;
-}
-
-.nav_projets a:active::after /*petit triangle bleu*/
+.nav_projets a:nth-child(2n+2):active::after /*creative + portfolio petit triangle bleu*/
 {
     font-family: "FontAwesome";
     content:"\f0d7";
     position: absolute;
-    transform: translate(-39px, 25px);
+    transform: translate(-37px, 25px);
     color: #468CAD;
     font-size: 24px;
 }
@@ -579,7 +592,7 @@ iframe
     max-width: 768px;
     height: 600px;
     position: absolute;
-    opacity: 0.5;
+    opacity: 0.4;
     pointer-events: none;
 }
 
@@ -597,7 +610,7 @@ iframe
 fieldset
 {
     border: 0px;
-    background-color:rgba(245,245,245,0.8);
+    background-color:rgba(255,255,255,0.8);
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -605,12 +618,18 @@ fieldset
 fieldset h2
 {
     font-family: "robotoblack", sans-serif;
+    color:#272727
 }
 
 address
 {
     font-family: "robotoregular", sans-serif;
     font-style: normal;
+}
+
+address p::first-line
+{
+    font-family: "robotoblack", sans-serif;
 }
 
 #name, #email, #subject, textarea

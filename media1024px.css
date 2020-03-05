@@ -29,7 +29,7 @@ body
     padding:0px;
     width: 100vw;
     font-family: robotoregular;
-    color: black;
+    color: #64686D;
 }
 
 header,main
@@ -72,7 +72,7 @@ header,main
 {
     margin: 10px;
     text-decoration: none; /*retrait soulignement par défaut des liens*/
-    color: black;
+    color: #64686D;
     padding:40px 10px 0px 10px;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -152,7 +152,7 @@ header,main
     background-color: rgba(0,0,0,0.5);
     border-radius: 40px 0px 0px 40px;
     position: absolute;
-    top: 216px;
+    top: 220px;
     margin-left: 984px; /*4K*/
 }
 
@@ -171,7 +171,7 @@ header,main
     background-color: rgba(0,0,0,0.5);
     border-radius: 0px 40px 40px 0px;
     position: absolute;
-    top:216px;
+    top:220px;
 }
 
 .fa-chevron-left 
@@ -188,7 +188,7 @@ header,main
 {
     width:1024px;
     height:4px;
-    transform: translateY(100px);
+    transform: translateY(110.5px);
     display: flex;
 }
 
@@ -229,6 +229,7 @@ header,main
     margin: auto;
     line-height: 3em;
     font-family: 'robotoblack', sans-serif;
+    color:#272727;
 }
 
 .fa/*rond bleu (+ logos ux ui seo)*/
@@ -291,7 +292,7 @@ header,main
     display: flex;
     position: relative;
     top: 50%;
-    margin-top: -78px
+    margin-top: -54px
 }
 
 .presentation_services .fa-circle /*cercles bleus ux, ui, seo*/
@@ -340,6 +341,7 @@ header,main
 {
     line-height: 1px;
     font-family: 'robotoblack', sans-serif;
+    color: #272727;
 }
 
 /*------------------------------------------------SECTION PROJETS-----------------------------------------------------------------*/
@@ -364,6 +366,7 @@ header,main
     /*margin-bottom: 15px;*/
     line-height: 3em;
     font-family: 'robotoblack', sans-serif;
+    color:#272727;
 }
 
 .header_projets p
@@ -403,7 +406,15 @@ header,main
     margin: 0px;
     line-height: 35px;
     text-align: center;
-    color: black;
+    color: #64686D;
+}
+
+/*menu au survol*/
+.nav_projets a:hover
+{
+    color: #FFFFFF;
+    background-color: #5ca9d0;
+    border-bottom: 3px solid #468CAD;
 }
 
 /*all works*/
@@ -415,12 +426,22 @@ header,main
     border-bottom: 3px solid #468CAD;
 }
 
-.nav_projets a:first-child::after
+.nav_projets a:first-child::after 
 {
     font-family: "FontAwesome";
     content:"\f0d7";
     position: absolute;
     transform: translate(-39px, 25px);
+    color: #468CAD;
+    font-size: 24px;
+}
+
+.nav_projets a:nth-child(3):hover::after /*corporate triangle bleu*/
+{
+    font-family: "FontAwesome";
+    content:"\f0d7";
+    position: absolute;
+    transform: translate(-42px, 25px);
     color: #468CAD;
     font-size: 24px;
 }
@@ -432,20 +453,12 @@ header,main
     border-radius: 0px 5px 5px 0px;  
 }
 
-/*menu au survol*/
-.nav_projets a:hover
-{
-    color: #FFFFFF;
-    background-color: #5ca9d0;
-    border-bottom: 3px solid #468CAD;
-}
-
-.nav_projets a:hover::after /*petit triangle bleu*/
+.nav_projets a:nth-child(2n+2):hover::after /*creative + portfolio petit triangle bleu*/
 {
     font-family: "FontAwesome";
     content:"\f0d7";
     position: absolute;
-    transform: translate(-39px, 25px);
+    transform: translate(-37px, 25px);
     color: #468CAD;
     font-size: 24px;
 }
@@ -568,7 +581,7 @@ iframe
     max-width: 1024px;
     height: 600px;
     position: absolute;
-    opacity: 0.5;
+    opacity: 0.4;
     pointer-events: none;
 }
 
@@ -586,7 +599,7 @@ iframe
 fieldset
 {
     border: 0px;
-    background-color:rgba(245,245,245,0.8);
+    background-color:rgba(255,255,255,0.8);
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -594,11 +607,17 @@ fieldset
 fieldset h2
 {
     font-family: "robotoblack", sans-serif;
+    color:#272727;
 }
 
 address
 {
     font-style: normal;
+}
+
+address p::first-line
+{
+    font-family: "robotoblack", sans-serif;
 }
 
 #name, #email, #subject, textarea

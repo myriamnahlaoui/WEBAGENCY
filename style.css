@@ -29,7 +29,7 @@ body
     padding:0px;
     width: 100vw;
     font-family: 'robotoregular', sans-serif;
-    color: black;
+    color: #64686D;
     font-size: 18px;
 }
 
@@ -75,7 +75,7 @@ header,main
 {
     margin: 24px;
     text-decoration: none; /*retrait soulignement par défaut des liens*/
-    color: black;
+    color: #64686D;
     padding:40px 10px 0px 10px;
 }
 
@@ -154,7 +154,7 @@ header,main
     background-color: rgba(0,0,0,0.5);
     border-radius: 40px 0px 0px 40px;
     position: absolute;
-    top: 300px;
+    top: 317px;
     margin-left: 1400px; /*4K*/
 }
 
@@ -173,7 +173,7 @@ header,main
     background-color: rgba(0,0,0,0.5);
     border-radius: 0px 40px 40px 0px;
     position: absolute;
-    top:300px;
+    top:317px;
 }
 
 .fa-chevron-left 
@@ -190,7 +190,7 @@ header,main
 {
     width:1440px;
     height:4px;
-    transform: translateY(184px);
+    transform: translateY(196px);
     display: flex;
 }
 
@@ -231,6 +231,7 @@ header,main
     line-height: 3em;
     font-family: 'robotoblack', sans-serif;
     font-size: 2em;
+    color: #272727;
 }
 
 
@@ -295,7 +296,7 @@ header,main
     display: flex;
     position: relative;
     top: 50%;
-    margin-top: -40px
+    margin-top: -21px
 }
 
 .presentation_services .fa-circle /*cercles bleus ux, ui, seo*/
@@ -345,8 +346,8 @@ header,main
 {
     line-height: 1px;
     font-family: 'robotoblack', sans-serif;
+    color: #272727;
 }
-
 /*------------------------------------------------SECTION PROJETS-----------------------------------------------------------------*/
 
 #projets
@@ -369,6 +370,7 @@ header,main
     line-height: 3em;
     font-family: 'robotoblack', sans-serif;
     font-size: 2em;
+    color:#272727
 }
 
 .header_projets p
@@ -408,33 +410,7 @@ header,main
     margin: 0px;
     line-height: 35px;
     text-align: center;
-    color: black;
-}
-
-/*all works*/
-.nav_projets a:first-child
-{
-    color: white;
-    background-color: #5ca9d0;
-    border-bottom: 3px solid #468CAD;
-    border-radius: 5px 0px 0px 5px;
-}
-
-.nav_projets a:first-child::after
-{
-    font-family: "FontAwesome";
-    content:"\f0d7";
-    position: absolute;
-    transform: translate(-39px, 25px);
-    color: #468CAD;
-    font-size: 24px;
-}
-
-/*portfolio*/
-
-.nav_projets a:last-child:hover
-{
-    border-radius: 0px 5px 5px 0px;
+    color: #64686D;
 }
 
 /*menu au survol*/
@@ -445,7 +421,44 @@ header,main
     border-bottom: 3px solid #468CAD;
 }
 
-.nav_projets a:hover::after /*petit triangle bleu*/
+/*all works*/
+.nav_projets a:first-child /*fixe*/
+{
+    color: white;
+    background-color: #5ca9d0;
+    border-bottom: 3px solid #468CAD;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.nav_projets a:first-child::after /*fixe*/
+{
+    font-family: "FontAwesome";
+    content:"\f0d7";
+    position: absolute;
+    transform: translate(-45px, 25px);
+    color: #468CAD;
+    font-size: 24px;
+}
+
+/*corporate triangle au hover*/
+.nav_projets a:nth-child(3):hover::after 
+{
+    font-family: "FontAwesome";
+    content:"\f0d7";
+    position: absolute;
+    transform: translate(-45px, 25px);
+    color: #468CAD;
+    font-size: 24px;
+}
+
+/*portfolio border radius au hover*/
+
+.nav_projets a:last-child:hover
+{
+    border-radius: 0px 5px 5px 0px;
+}
+
+.nav_projets a:nth-child(2n+2):hover::after /*creative + portfolio petit triangle bleu*/
 {
     font-family: "FontAwesome";
     content:"\f0d7";
@@ -572,7 +585,7 @@ iframe
     max-width: 1440px;
     height: 600px;
     position: absolute;
-    opacity: 0.5;
+    opacity: 0.4;
     pointer-events: none;
 }
 
@@ -590,7 +603,7 @@ iframe
 fieldset
 {
     border: 0px;
-    background-color:rgba(245,245,245,0.8);
+    background-color:rgba(255,255,255,0.8);
     margin-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
@@ -599,11 +612,17 @@ fieldset
 fieldset h2
 {
     font-family: "robotoblack", sans-serif;
+    color:#272727;
 }
 
 address
 {
     font-style: normal;
+}
+
+address p::first-line
+{
+    font-family: "robotoblack",sans-serif;
 }
 
 #name, #email, #subject, textarea

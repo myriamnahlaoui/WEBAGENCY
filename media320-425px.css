@@ -28,7 +28,7 @@ body
     margin:auto;
     width: 100vw;
     font-family: 'robotoregular';
-    color: black;
+    color: #64686D;
     max-width: 320px;    
 }
 
@@ -76,7 +76,7 @@ header, main
 {
     margin: 0px 50px 0px 50px;
     text-decoration: none; /*retrait soulignement par défaut des liens*/
-    color: black;
+    color: #64686D;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
 
@@ -220,6 +220,7 @@ header, main
     margin: auto;
     line-height: 3em;
     font-family: 'robotoblack', sans-serif;
+    color:#272727;
 }
 
 .fa/*rond bleu (+ logos ux ui seo)*/
@@ -310,7 +311,7 @@ img
     font-size: 11px;
     margin-top: 9px;
     position: relative;
-    transform: translateX(-1px);
+  
 }
 
 .cercle_logo /*cercle gris ux, ui, seo*/
@@ -348,6 +349,7 @@ img
     justify-content: center;
     text-align: center;
     font-family: 'robotoblack', sans-serif;
+    color: #272727;
 }
 
 .description_ux h3, .description_ui h3
@@ -389,6 +391,7 @@ img
     margin: auto;
     line-height: 3em;
     font-family: 'robotoblack', sans-serif;
+    color: #272727;
 }
 
 .header_projets p
@@ -425,7 +428,15 @@ img
     margin: 0px;
     line-height: 35px;
     text-align: center;
-    color: black;
+    color: #64686D;
+}
+
+/*menu de navigation au survol*/
+.nav_projets a:active
+{
+    color: #FFFFFF;
+    background-color: #5ca9d0;
+    border-bottom: 3px solid #468CAD;
 }
 
 /*all works*/
@@ -447,6 +458,16 @@ img
     font-size: 24px;
 }
 
+.nav_projets a:nth-child(3):active:after
+{
+    font-family: "FontAwesome";
+    content:"\f0d7";
+    position: absolute;
+    transform: translate(-42px, 25px);
+    color: #468CAD;
+    font-size: 24px;
+}
+
 /*portfolio*/
 
 .nav_projets a:last-child:active
@@ -454,20 +475,12 @@ img
     border-radius: 0px 5px 5px 0px;  
 }
 
-/*menu de navigation au survol*/
-.nav_projets a:active
-{
-    color: #FFFFFF;
-    background-color: #5ca9d0;
-    border-bottom: 3px solid #468CAD;
-}
-
-.nav_projets a:active::after /*petit triangle bleu*/
+.nav_projets a:nth-child(2n+2):active::after /*petit triangle bleu*/
 {
     font-family: "FontAwesome";
     content:"\f0d7";
     position: absolute;
-    transform: translate(-39px, 25px);
+    transform: translate(-37px, 25px);
     color: #468CAD;
     font-size: 24px;
 }
@@ -615,6 +628,7 @@ fieldset h2
     text-align: center;
     margin-bottom: 0px;
     font-size: 20px;
+    color: #272727;
 }
 
 fieldset address
@@ -623,6 +637,11 @@ fieldset address
     text-align: center;
     font-size: 15px;
     font-style: normal;
+}
+
+address p::first-line
+{
+    font-family: "robotoblack", sans-serif;
 }
 
 fieldset>p 

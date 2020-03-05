@@ -29,7 +29,7 @@ body
     padding:0px;
     width: 100vw;
     font-family: robotoregular;
-    color: black;
+    color: #64686D;
 }
 
 header,main
@@ -77,7 +77,7 @@ header,main
 {
     margin: 0px 50px 0px 50px;
     text-decoration: none; /*retrait soulignement par défaut des liens*/
-    color: black;
+    color: #64686D;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
 
@@ -219,6 +219,7 @@ header,main
     margin: auto;
     line-height: 3em;
     font-family: 'robotoblack', sans-serif;
+    color: #272727;
 }
 
 .fa /*rond bleu (+ logos ux ui seo)*/
@@ -338,6 +339,7 @@ header,main
     justify-content: center;
     text-align: center;
     font-family: 'robotoblack', sans-serif;
+    color:#272727;
 }
 
 .description_ux h3, .description_ui h3
@@ -381,7 +383,8 @@ header,main
     margin: auto;
     /*margin-bottom: 15px;*/
     line-height: 3em;
-    font-family: 'robotoblack', sans-serif
+    font-family: 'robotoblack', sans-serif;
+    color: #272727;
 }
 
 .header_projets p
@@ -423,7 +426,15 @@ header,main
     margin: 0px;
     line-height: 35px;
     text-align: center;
-    color: black;
+    color: #64686D;
+}
+
+/*menu de navigation au clic*/
+.nav_projets a:active
+{
+    color: #FFFFFF;
+    background-color: #5ca9d0;
+    border-bottom: 3px solid #468CAD;
 }
 
 /*all works*/
@@ -446,6 +457,16 @@ header,main
     font-size: 24px;
 }
 
+.nav_projets a:nth-child(3):active::after /*corporate*/
+{
+    font-family: "FontAwesome";
+    content:"\f0d7";
+    position: absolute;
+    transform: translate(-42px, 25px);
+    color: #468CAD;
+    font-size: 24px;
+}
+
 /*portfolio*/
 
 .nav_projets a:last-child:active
@@ -453,20 +474,12 @@ header,main
     border-radius: 0px 5px 5px 0px;  
 }
 
-/*menu de navigation au clic*/
-.nav_projets a:active
-{
-    color: #FFFFFF;
-    background-color: #5ca9d0;
-    border-bottom: 3px solid #468CAD;
-}
-
-.nav_projets a:active::after /*petit triangle bleu*/
+.nav_projets a:nth-child(2n+2):active:after /*creative + corporate petit triangle bleu*/
 {
     font-family: "FontAwesome";
     content:"\f0d7";
     position: absolute;
-    transform: translate(-39px, 25px);
+    transform: translate(-37px, 25px);
     color: #468CAD;
     font-size: 24px;
 }
@@ -612,6 +625,7 @@ fieldset h2
     margin-top: 3px;
     text-align: center;
     margin-bottom: 0px;
+    color:#272727;
 }
 
 fieldset address
@@ -636,6 +650,11 @@ fieldset h2
 address
 {
     font-style: normal;
+}
+
+address p::first-line
+{
+    font-family: "robotoblack", sans-serif;
 }
 
 #name, #email, #subject, textarea
